@@ -124,3 +124,10 @@ casa.añadir_carronuevo(camion1 )
 casa.añadir_carronuevo(camion2 )
 
 casa.mostrar_carros_disponibles()
+
+comprador1.verificar_disponibilidad(carro4)
+
+
+comprador1.comprar_vehiculo(carro4)
+
+casa.mostrar_carros_disponibles()
