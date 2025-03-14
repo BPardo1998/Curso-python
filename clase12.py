@@ -1,5 +1,6 @@
 class Vehiculos:
     def __init__(self, nombre, modelo, precio):
+        #Pilar No1  Encapsulación, las cuales son variables de isntancia que contie4nen datos proiovados del objeto
         self.nombre = nombre
         self.modelo = modelo
         self.precio = precio
@@ -11,7 +12,8 @@ class Vehiculos:
             print(f"El vehiculo {self.nombre} ya se vendio")
         else:
             print(f"El vehiculo {self.nombre} no esta disponible.")
-
+             
+    #Pilar No2 Abstracción  
     def estado(self):
         return self.disponible
 #Queremos saber el precuiio de un vehioculo    
@@ -25,7 +27,7 @@ class Vehiculos:
         raise NotImplementedError("Este metodo debe ser implementado por la subclase")
     
 #aqui vam,os a crear una subclase, que va aheredaar la clase Vehicuvlos. al colocar el not, hace referencia a que el carro ya no esta disponible por que fue vendido, entonces púedo porender el carro
-
+#Pilar No3 Herencia
 class Carro_particular(Vehiculos):
         def prender_vehiculo(self):
             if not self.disponible:
@@ -81,7 +83,7 @@ class Comprador:
             confirmacion = "Disponible"
         else:
             confirmacion = "No disponible"
-        print(f"El vehicul0o {vehiculo.nombre} esta {confirmacion} y tiene un costo de {vehiculo.precio}")
+        print(f"El vehiculo {vehiculo.nombre} esta {confirmacion} y tiene un costo de {vehiculo.precio}")
 
 class Concesionario:
     def __init__(self):
@@ -100,7 +102,7 @@ class Concesionario:
          print("Los carros dispónibles son:")
          for vehiculo in self.lote_de_carros:
               if vehiculo.estado():
-                   print(f" El {vehiculo.nombre} que cuesta {vehiculo.get_precio()}")
+                   print(f" El {vehiculo.nombre} .  que cuesta {vehiculo.get_precio()}")
                    
 carro1 = Carro_particular("Suzuki", "2014", "$56.000.000")         
 carro2 = Carro_particular("chevreolet", "2014", "$36.000.000") 
