@@ -13,4 +13,20 @@ with open('clase15/nota.csv', 'r') as file:
      for row in caja:
          print(f"Producto : {row['name']}, Costo: {row['price']}")
 
+#Vamos a creear una nueva fila con un producto nuevo en nuestro archivo csv
 
+import csv
+
+new_product = {
+    'name': 'cargador portatil',
+    'price': 7500,
+    'quantity': 190,
+    'brand': 'Cargadores',
+    'category': 'Accesortios',
+    'Fecha': '09-08-2025',
+}
+with open('clase15/nota.csv', mode='a', newline='') as file:
+    #file.write('\n')
+    libreria = csv.DictWriter(file, fieldnames = new_product.keys())
+    #fieldname signifrica que es el quie me encuentra los nombres de las columnas o llamadas llaves 
+    libreria.writerow(new_product)

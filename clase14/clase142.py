@@ -16,4 +16,4 @@
     print(lineas)"""
 #
 with open('clase14/caperucita.txt','a') as file:
-    file.write("\n\n\n\nEsta es la mejor histioria ")
+    file.write("\n\n\n\nEsta es la mejor histioria ")  
